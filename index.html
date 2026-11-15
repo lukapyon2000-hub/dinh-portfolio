@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dinh Dinh Portfolio — Communication, Partnership & Events</title>
+    <meta name="description" content="Interactive web portfolio of Nguyễn Đình Đình — Techcombank Campus Ambassador 2026 candidate, Communication, Partnership & Event Projects showcase." />
+    <meta property="og:title" content="Dinh Dinh Portfolio — Communication, Partnership & Events" />
+    <meta property="og:description" content="Interactive web portfolio of Nguyễn Đình Đình — Techcombank Campus Ambassador 2026 candidate, Communication, Partnership & Event Projects showcase." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if (window.location.protocol === 'file:') {
+        var showExtractGuide = function () {
+          document.getElementById('root').innerHTML =
+            '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#111113;color:#f4f4f5;font-family:system-ui,-apple-system,sans-serif;padding:24px;">' +
+            '<div style="max-width:540px;background:#18181b;border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:28px;line-height:1.6;">' +
+            '<div style="color:#f87171;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Hướng dẫn mở Portfolio</div>' +
+            '<h1 style="font-size:20px;margin:8px 0 12px;color:#fff;">Cần giải nén toàn bộ thư mục ZIP trước khi mở</h1>' +
+            '<p style="font-size:14px;color:#d4d4d8;margin:0 0 12px;">Bạn đang mở <code>index.html</code> trực tiếp bên trong file nén (.zip) hoặc thiếu thư mục <code>public/</code> đi kèm.</p>' +
+            '<ol style="font-size:14px;color:#e4e4e7;padding-left:20px;margin:0 0 16px;">' +
+            '<li>Nhấn chuột phải vào file <strong>dinh-dinh-portfolio-github.zip</strong> chọn <strong>Extract All / Giải nén tất cả</strong>.</li>' +
+            '<li>Mở thư mục vừa giải nén rồi nhấn đúp lại vào <code>index.html</code> (hoặc <code>public/mo-truc-tiep.html</code>).</li>' +
+            '</ol>' +
+            '<p style="font-size:12px;color:#a1a1aa;margin:0;">Hoặc dùng file <strong>DinhDinh_Portfolio_Offline.html</strong> nếu muốn mở bằng 1 file duy nhất không cần giải nén.</p>' +
+            '</div></div>';
+        };
+        var probeBuilt = new Image();
+        probeBuilt.onload = function () { window.location.replace('./mo-truc-tiep.html'); };
+        probeBuilt.onerror = function () {
+          var probeSource = new Image();
+          probeSource.onload = function () { window.location.replace('./public/mo-truc-tiep.html'); };
+          probeSource.onerror = showExtractGuide;
+          probeSource.src = './public/portfolio/s01_hero.webp';
+        };
+        probeBuilt.src = './portfolio/s01_hero.webp';
+      }
+    </script>
+  </body>
+</html>
+
